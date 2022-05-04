@@ -8,25 +8,26 @@ var db = new aws.DynamoDB({
 });
 
 rest_order_biz2.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send("world");
+  res.send(exports);
+  console.log(exports)
 });
 
-// exports.handler =(event:any) => {
-//   return query(event);
-// }
+exports.handler =(event:any) => {
+  return query(event);
+}
 
-// const query = async (event:any) => { 
-// var params = {
-//     Key: {
-//     "id": {
-//        S: "11"
-//       }
-//     }, 
-//     TableName: "prod_mek_giftcon"
-//    };
+const query = async (event:any) => { 
+var params = {
+    Key: {
+    "id": {
+       S: "11"
+      }
+    }, 
+    TableName: "prod_mek_giftcon"
+   };
 
-//   return await db.getItem(params).promise();
+  return await db.getItem(params).promise();
 
-// }
+}
 
 export = rest_order_biz2;
