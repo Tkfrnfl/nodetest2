@@ -25,6 +25,18 @@
 			"problemMatcher": [],
 			"label": "npm: build",
 			"detail": "tsc -p ."
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "tsconfig.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"label": "tsc: 빌드 - tsconfig.json"
 		}
 	]
 }
